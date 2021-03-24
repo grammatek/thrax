@@ -42,3 +42,21 @@ USAGE:
 DOCUMENTATION:
   See www.opengrm.org for general documentation.
   See ./NEWS for updates since the last release.
+
+
+BUILDING FOR ANDROID
+
+  This branch has the changes necessary to compile Thrax for all Android platforms.
+
+  The file build-android.sh is used to call configure / make / make install with the right options.
+  One can/should set a few environment variables to influence build assumptions in
+  build-android.sh.
+
+  These variables are ANDROID_NDK, ANDROID_NDK_TOOLCHAIN, ANDROID_API, PREFIX. Pleased read
+  the file build-android.sh carefully, how these are used and adapt them to your needs.
+
+  You need to have an accompanying OpenFst installed with the correct platform
+  inside your installation path. Refer to https://github.com/grammatek/openfst/tree/android.
+  The currently used OpenFST version is 1.8.1
+
+  Finally, call ./build-android.sh to configure/make/make install Thrax.
